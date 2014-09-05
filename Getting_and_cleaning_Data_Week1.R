@@ -1,7 +1,7 @@
 # Coursera = Getting and Cleaning Date
 
 # Set Working Directory
-setwd("C:/Coursera/Getting and Cleaning Data")
+setwd("C:/Coursera/Getting-and-Cleaning-Data")
 
 # Create a data directory to keep all the downloaded data files
 if (!file.exists("data")){
@@ -49,7 +49,7 @@ doc <- xmlRoot(xmlTreeParse(filePath,useInternal=TRUE))
 # This will traverse to zipcode of the first record => doc[[1]][[1]][[2]]
 # This will grab all zipcodes
 RestaurantList <- xpathSApply(doc[[1]][[1]],"//zipcode",xmlValue)
-sum(RestaurantList[zipcode==21231]==21231)
+sum(RestaurantList[RestaurantList==21231]==21231)
 
 # Q5
 install.packages("data.table")
