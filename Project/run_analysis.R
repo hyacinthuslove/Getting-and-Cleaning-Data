@@ -85,7 +85,7 @@ for (i in index_range){
 
 data2 <- melt(data, id=1:2,na.rm=TRUE)
 data3 <- dcast(data2, activity + subject ~ variable, fun.aggregate=mean)
-new_name <- names(data3)
+new_name <- names(data3)[3:length(data3)]
 
 j <- 1   
 for (i in 3:length(data3)){
